@@ -1,0 +1,131 @@
+/* Общие стили для фона и шрифтов */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: #4b4a4a; /* Тёмный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #e0e0e0; /* Светлый текст */
+}
+
+/* Контейнер для двух блоков */
+.container {
+    display: flex;
+    gap: 20px; /* Расстояние между карточками */
+    flex-wrap: wrap; /* Для адаптивности на маленьких экранах */
+    justify-content: center;
+}
+
+/* Стили для карточек (блоков) */
+.card {
+  min-height: 100px; /* Фиксированная высота — текст не скачет */
+  min-width: 250px;
+  justify-content: center;
+    background-color: #2b2b2b; /* Фон карточек */
+    border: 2px solid #179099; /* Голубая обводка */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5); /* Свечение */
+}
+
+/* Стили для блока настроек */
+.settings-card .input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.settings-card label {
+    font-size: 1.1em;
+    margin-right: 10px;
+    color: #00f0ff; /* Голубой текст лейблов */
+}
+
+.settings-card input[type="number"] {
+    background-color: #1a1a1a;
+    border: 1px solid #00f0ff;
+    color: #e0e0e0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    width: 80px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Стили для блока счётчика */
+.counter-display {
+  min-height: 100px; /* Фиксированная высота — текст не скачет */
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   /* Крупный текст для цифр */
+  
+  color: #00f0ff;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #00f0ff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: font-size 0.2s ease;
+  text-wrap: balance;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px; /* Расстояние между кнопками инкремента и ресета */
+}
+
+.btn {
+    background-color: #2b2b2b;
+    color: #00f0ff;
+    border: 2px solid #00f0ff;
+    padding: 10px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background-color: #00f0ff; /* Голубой фон при наведении */
+    color: #1a1a1a; /* Тёмный текст при наведении */
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+
+.counter-display.error {
+  color: red;
+}
+
+.input-group input.error {
+  border: 2px solid red;
+}
+
+
+
+.counter-display.message {
+  font-size: 1.2rem;
+}
+
+.counter-display.max {
+  color: red;
+}
